@@ -5,11 +5,11 @@
 > **Сайт:** https://entropybot.app — инструкции, статистика, скачивание.
 > **Website:** https://entropybot.app — guides, statistics, downloads.
 
-**Версия 1.0.9 / Version 1.0.9**
+**Версия 1.1.0 / Version 1.1.0**
 
 ## Русский
 
-**1.0.9:** торговля на API-ключах Hyperliquid — реферал проверяется через основной кошелёк.
+**1.1.0:** защита от медленного дрейфа базиса, безопасность исполнения ордеров, исправления по аудиту, исправлено зависание при обновлении, исправлен `flatten` (рынки EWY/DRAM, 3+ рынков).
 
 Торговый бот для спреда между двумя биржами HIP-3 на Hyperliquid — **Entropy (io)** и **TRADE.XYZ (xyz)** — на рынках NBIS, DRAM, EWY, SNDK.
 Режим **GREEN**: позиция закрывается в плюс; с 7-го часа удержания бот согласен выйти в ноль, а через 10 часов закрывает позицию.
@@ -49,7 +49,7 @@ sudo bash /opt/entropy-green/install-green.sh --update-now
 
 ## English
 
-**1.0.9:** trading with Hyperliquid API-wallet keys — the referral is verified through the main wallet.
+**1.1.0:** slow basis-drift entry gate, order execution safety, audit fixes, the hang on update fixed, `flatten` fixes (EWY/DRAM markets, 3+ markets).
 
 A spread-trading bot between two Hyperliquid HIP-3 venues — **Entropy (io)** and **TRADE.XYZ (xyz)** — on NBIS, DRAM, EWY and SNDK.
 **GREEN** mode: positions close in profit; from hour 7 the bot accepts a break-even exit, and closes the position at 10 hours.
