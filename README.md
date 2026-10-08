@@ -5,11 +5,11 @@
 > **Сайт:** https://entropybot.app — инструкции, статистика, скачивание.
 > **Website:** https://entropybot.app — guides, statistics, downloads.
 
-**Версия 1.1.0 / Version 1.1.0**
+**Версия 1.2.0 / Version 1.2.0**
 
 ## Русский
 
-**1.1.0:** защита от медленного дрейфа базиса, безопасность исполнения ордеров, исправления по аудиту, исправлено зависание при обновлении, исправлен `flatten` (рынки EWY/DRAM, 3+ рынков).
+**1.2.0:** исправления панели результатов, проверяемое восстановление реферального допуска после штатного перезапуска, защита ручного обновления при неудачной остановке службы, исправление HTTPS-ответов и защита скриптов локальной панели. Торговые профили и размеры не менялись. Протокол телеметрии остаётся сводным; полный серверный журнал в эту сборку не переносился.
 
 Торговый бот для спреда между двумя биржами HIP-3 на Hyperliquid — **Entropy (io)** и **TRADE.XYZ (xyz)** — на рынках NBIS, DRAM, EWY, SNDK.
 Режим **GREEN**: позиция закрывается в плюс; с 7-го часа удержания бот согласен выйти в ноль, а через 10 часов закрывает позицию.
@@ -49,7 +49,7 @@ sudo bash /opt/entropy-green/install-green.sh --update-now
 
 ## English
 
-**1.1.0:** slow basis-drift entry gate, order execution safety, audit fixes, the hang on update fixed, `flatten` fixes (EWY/DRAM markets, 3+ markets).
+**1.2.0:** results dashboard fixes, authenticated referral-admission recovery after a clean shutdown, manual-upgrade stop-failure checks, HTTPS response delivery fixes and local-page script protection. Trading profiles and sizes are unchanged. Telemetry remains aggregate-only; this release does not add the full server journal.
 
 A spread-trading bot between two Hyperliquid HIP-3 venues — **Entropy (io)** and **TRADE.XYZ (xyz)** — on NBIS, DRAM, EWY and SNDK.
 **GREEN** mode: positions close in profit; from hour 7 the bot accepts a break-even exit, and closes the position at 10 hours.
