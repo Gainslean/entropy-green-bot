@@ -5,11 +5,11 @@
 > **Сайт:** https://entropybot.app — инструкции, статистика, скачивание.
 > **Website:** https://entropybot.app — guides, statistics, downloads.
 
-**Версия 1.2.0 / Version 1.2.0**
+**Версия 1.2.1 / Version 1.2.1**
 
 ## Русский
 
-**1.2.0:** исправления панели результатов, проверяемое восстановление реферального допуска после штатного перезапуска, защита ручного обновления при неудачной остановке службы, исправление HTTPS-ответов и защита скриптов локальной панели. Торговые профили и размеры не менялись. Протокол телеметрии остаётся сводным; полный серверный журнал в эту сборку не переносился.
+**1.2.1:** выход в профит: срок отправки считается от времени стакана на бирже, устаревший стакан не даёт отправить заявку на выход; повтор частичного выхода сверяет остаток ног по свежему снимку позиций, после последней попытки сразу начинается аварийное закрытие; в новых установках фильтр медленного дрейфа базиса закрывает входы только на SNDK (на остальных рынках считает и пишет в журнал). Торговые пороги и размеры не менялись; контракт выхода открытых позиций тот же.
 
 Торговый бот для спреда между двумя биржами HIP-3 на Hyperliquid — **Entropy (io)** и **TRADE.XYZ (xyz)** — на рынках NBIS, DRAM, EWY, SNDK.
 Режим **GREEN**: позиция закрывается в плюс; с 7-го часа удержания бот согласен выйти в ноль, а через 10 часов закрывает позицию.
@@ -49,7 +49,7 @@ sudo bash /opt/entropy-green/install-green.sh --update-now
 
 ## English
 
-**1.2.0:** results dashboard fixes, authenticated referral-admission recovery after a clean shutdown, manual-upgrade stop-failure checks, HTTPS response delivery fixes and local-page script protection. Trading profiles and sizes are unchanged. Telemetry remains aggregate-only; this release does not add the full server journal.
+**1.2.1:** profit exits: the send deadline is measured from the exchange order-book time, so a stale book no longer sends an exit order; the partial-exit retry reconciles the remaining legs from a fresh position snapshot and goes straight to the emergency close after the last attempt; on new installs the slow basis-drift filter blocks entries only on SNDK (it still computes and logs on the other markets). Trading thresholds and sizes are unchanged; the exit contract of open positions is the same.
 
 A spread-trading bot between two Hyperliquid HIP-3 venues — **Entropy (io)** and **TRADE.XYZ (xyz)** — on NBIS, DRAM, EWY and SNDK.
 **GREEN** mode: positions close in profit; from hour 7 the bot accepts a break-even exit, and closes the position at 10 hours.
